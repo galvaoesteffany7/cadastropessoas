@@ -22,6 +22,7 @@ namespace CadastroPessoas
                 7000.00m,
                 "Tecnologia");
 
+            // ENCAPSULAMENTO: campos privados, acesso por métodos e propriedades
             Console.WriteLine("=== ENCAPSULAMENTO ===");
             cliente.SetNome("Ana Souza Lima");
             cliente.Idade = 29;
@@ -31,28 +32,30 @@ namespace CadastroPessoas
             cliente.Idade = -5; // valor inválido: a validação ignora
             Console.WriteLine("Idade após tentar -5: " + cliente.Idade);
 
+            // SOBRECARGA DE MÉTODO: mesmo nome, parâmetros diferentes
             Console.WriteLine();
-            Console.WriteLine("=== SOBRECARGA ===");
+            Console.WriteLine("=== SOBRECARGA DE MÉTODO ===");
             cliente.Apresentar();
             Console.WriteLine();
             cliente.Apresentar(true);
 
+            // SOBRECARGA DE CONSTRUTOR
             Console.WriteLine();
-            Console.WriteLine("=== CLIENTE ===");
-            cliente.Apresentar();
-
-            Console.WriteLine();
-            Console.WriteLine("=== CLIENTE SEM CÓDIGO ===");
+            Console.WriteLine("=== SOBRECARGA DE CONSTRUTOR ===");
             Cliente clienteSemCodigo = new Cliente("Bruno Lima", 31);
             clienteSemCodigo.Apresentar();
 
+            // POLIMORFISMO: a mesma chamada executa o método de cada classe
             Console.WriteLine();
-            Console.WriteLine("=== FUNCIONÁRIO ===");
-            funcionario.Apresentar();
+            Console.WriteLine("=== POLIMORFISMO ===");
+            Pessoa[] pessoas = { cliente, funcionario, gerente };
 
-            Console.WriteLine();
-            Console.WriteLine("=== GERENTE ===");
-            gerente.Apresentar();
+            foreach (Pessoa pessoa in pessoas)
+            {
+                Console.WriteLine("--- " + pessoa.GetType().Name + " ---");
+                pessoa.Apresentar();
+                Console.WriteLine();
+            }
 
             Console.ReadKey();
         }
