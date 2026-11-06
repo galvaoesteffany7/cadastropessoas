@@ -12,6 +12,11 @@ namespace CadastroPessoas
             CodigoCliente = codigoCliente;
         }
 
+        public Cliente(string nome, int idade)
+            : this(nome, idade, "SEM-CODIGO")
+        {
+        }
+
         public override void Apresentar()
         {
             base.Apresentar();

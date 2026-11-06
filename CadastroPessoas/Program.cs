@@ -42,6 +42,11 @@ namespace CadastroPessoas
             cliente.Apresentar();
 
             Console.WriteLine();
+            Console.WriteLine("=== CLIENTE SEM CÓDIGO ===");
+            Cliente clienteSemCodigo = new Cliente("Bruno Lima", 31);
+            clienteSemCodigo.Apresentar();
+
+            Console.WriteLine();
             Console.WriteLine("=== FUNCIONÁRIO ===");
             funcionario.Apresentar();
 
