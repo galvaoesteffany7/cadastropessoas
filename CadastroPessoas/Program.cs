@@ -22,6 +22,13 @@ namespace CadastroPessoas
                 7000.00m,
                 "Tecnologia");
 
+            Console.WriteLine("=== ENCAPSULAMENTO ===");
+            cliente.SetNome("Ana Souza Lima");
+            cliente.SetIdade(29);
+            Console.WriteLine("Nome: " + cliente.GetNome());
+            Console.WriteLine("Idade: " + cliente.GetIdade());
+
+            Console.WriteLine();
             Console.WriteLine("=== CLIENTE ===");
             cliente.ExibirDadosCliente();
 
