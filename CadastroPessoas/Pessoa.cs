@@ -2,7 +2,7 @@ using System;
 
 namespace CadastroPessoas
 {
-    public class Pessoa
+    public abstract class Pessoa
     {
         public string Nome;
         public int Idade;
