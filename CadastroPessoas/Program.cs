@@ -24,9 +24,12 @@ namespace CadastroPessoas
 
             Console.WriteLine("=== ENCAPSULAMENTO ===");
             cliente.SetNome("Ana Souza Lima");
-            cliente.SetIdade(29);
+            cliente.Idade = 29;
             Console.WriteLine("Nome: " + cliente.GetNome());
-            Console.WriteLine("Idade: " + cliente.GetIdade());
+            Console.WriteLine("Idade: " + cliente.Idade);
+
+            cliente.Idade = -5; // valor inválido: a validação ignora
+            Console.WriteLine("Idade após tentar -5: " + cliente.Idade);
 
             Console.WriteLine();
             Console.WriteLine("=== CLIENTE ===");

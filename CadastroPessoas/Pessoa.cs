@@ -10,7 +10,7 @@ namespace CadastroPessoas
         public Pessoa(string nome, int idade)
         {
             SetNome(nome);
-            SetIdade(idade);
+            Idade = idade;
         }
 
         public string GetNome()
@@ -23,20 +23,22 @@ namespace CadastroPessoas
             nome = novoNome;
         }
 
-        public int GetIdade()
+        public int Idade
         {
-            return idade;
-        }
-
-        public void SetIdade(int novaIdade)
-        {
-            idade = novaIdade;
+            get { return idade; }
+            set
+            {
+                if (value >= 0)
+                {
+                    idade = value;
+                }
+            }
         }
 
         public void Apresentar()
         {
             Console.WriteLine("Nome: " + GetNome());
-            Console.WriteLine("Idade: " + GetIdade());
+            Console.WriteLine("Idade: " + Idade);
         }
     }
 }
