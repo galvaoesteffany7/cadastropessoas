@@ -39,15 +39,15 @@ namespace CadastroPessoas
 
             Console.WriteLine();
             Console.WriteLine("=== CLIENTE ===");
-            cliente.ExibirDadosCliente();
+            cliente.Apresentar();
 
             Console.WriteLine();
             Console.WriteLine("=== FUNCIONÁRIO ===");
-            funcionario.ExibirDadosFuncionario();
+            funcionario.Apresentar();
 
             Console.WriteLine();
             Console.WriteLine("=== GERENTE ===");
-            gerente.ExibirDadosGerente();
+            gerente.Apresentar();
 
             Console.ReadKey();
         }

@@ -12,10 +12,10 @@ namespace CadastroPessoas
             CodigoCliente = codigoCliente;
         }
 
-        public void ExibirDadosCliente()
+        public override void Apresentar()
         {
+            base.Apresentar();
             Console.WriteLine("Código do cliente: " + CodigoCliente);
-            Apresentar();
         }
     }
 }

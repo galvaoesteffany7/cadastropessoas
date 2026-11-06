@@ -17,11 +17,11 @@ namespace CadastroPessoas
             return Salario * 0.10m;
         }
 
-        public void ExibirDadosFuncionario()
+        public override void Apresentar()
         {
+            base.Apresentar();
             Console.WriteLine("Salário: " + Salario);
             Console.WriteLine("Bônus: " + CalcularBonus());
-            Apresentar();
         }
     }
 }

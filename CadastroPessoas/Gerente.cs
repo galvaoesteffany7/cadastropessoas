@@ -16,10 +16,10 @@ namespace CadastroPessoas
             Departamento = departamento;
         }
 
-        public void ExibirDadosGerente()
+        public override void Apresentar()
         {
+            base.Apresentar();
             Console.WriteLine("Departamento: " + Departamento);
-            ExibirDadosFuncionario();
         }
     }
 }
