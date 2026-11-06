@@ -32,6 +32,12 @@ namespace CadastroPessoas
             Console.WriteLine("Idade após tentar -5: " + cliente.Idade);
 
             Console.WriteLine();
+            Console.WriteLine("=== SOBRECARGA ===");
+            cliente.Apresentar();
+            Console.WriteLine();
+            cliente.Apresentar(true);
+
+            Console.WriteLine();
             Console.WriteLine("=== CLIENTE ===");
             cliente.ExibirDadosCliente();
 
